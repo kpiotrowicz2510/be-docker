@@ -1,0 +1,15 @@
+version: '3'
+services:
+    drogex-mysql:
+     build: ./drogex-mysql
+     environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=prestashop
+      - LANG=C.UTF-8
+      - LC_ALL=C.UTF-8
+    drogex-prestashop:
+     build: ./drogex-prestashop
+     ports:
+      - 80:80
+     links:
+      - drogex-mysql  
