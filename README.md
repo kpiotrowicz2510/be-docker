@@ -11,7 +11,11 @@ Jak uruchomić:
 
 
 
-MySQL backup:
+
+
+
+
+# MySQL backup:
 
 docker exec -it presta_drogex-mysql_1 /bin/bash
 
