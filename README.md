@@ -8,3 +8,12 @@ Jak uruchomić:
  4. Może się zdażyć że pod tych 20 sekundach na localhost'cie jeszcze nie będzie widoczna presta, ale cierpliwości - lada
     moment będzie!
  5. W momencie kiedy wciśniemy w tej konsoli enter skrypt pójdzie dalej i wyłączy kontenery.
+
+
+
+MySQL backup:
+
+docker exec -it presta_drogex-mysql_1 /bin/bash
+cd /home
+/user/bin/mysqldump -u root --password=admin prestashop > backup.sql
+docker cp presta_drogex-mysql_1:/home/backup.sql C:\Users\Tomek\Desktop\back.sql
