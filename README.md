@@ -19,8 +19,6 @@ Jak uruchomić:
 
 docker exec -it presta_drogex-mysql_1 /bin/bash
 
-cd /home
-
-/user/bin/mysqldump -u root --password=admin prestashop > backup.sql
+/usr/bin/mysqldump -u root --password=admin prestashop > /home/backup.sql
 
 docker cp presta_drogex-mysql_1:/home/backup.sql C:\Users\Tomek\Desktop\back.sql
